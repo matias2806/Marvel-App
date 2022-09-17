@@ -44,7 +44,7 @@ final class HomeViewController: UITabBarController {
         let unselectedEventsImage = UIImage(named: "icon-calendar")!.withRenderingMode(.alwaysOriginal)
         let selectedEventsImage = UIImage(named: "icon-calendar-disabled")!.withRenderingMode(.alwaysOriginal)
         
-        let ncEvents = UINavigationController(rootViewController: UIViewController())
+        let ncEvents = UINavigationController(rootViewController: EventsConfigurator.build())
         ncEvents.tabBarItem = UITabBarItem(title: "Events", image: selectedEventsImage, selectedImage: nil)
         
         self.viewControllers = [ncCharacters, ncEvents]

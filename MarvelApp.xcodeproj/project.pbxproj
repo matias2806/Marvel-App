@@ -30,6 +30,13 @@
 		0A614B0628D263DF00D1BE7D /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A614B0428D263DF00D1BE7D /* CharacterTableViewCell.swift */; };
 		0A614B0728D263DF00D1BE7D /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A614B0528D263DF00D1BE7D /* CharacterTableViewCell.xib */; };
 		0AB4E25328D6449100646E59 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4E25228D6449100646E59 /* UITableView+.swift */; };
+		0AB4E25C28D6856100646E59 /* EventsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4E25528D6856100646E59 /* EventsConfiguration.swift */; };
+		0AB4E25D28D6856100646E59 /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4E25628D6856100646E59 /* EventsPresenter.swift */; };
+		0AB4E25E28D6856100646E59 /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4E25728D6856100646E59 /* EventsRouter.swift */; };
+		0AB4E25F28D6856100646E59 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4E25828D6856100646E59 /* EventsViewController.swift */; };
+		0AB4E26028D6856100646E59 /* EventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4E25928D6856100646E59 /* EventsProtocols.swift */; };
+		0AB4E26128D6856100646E59 /* EventsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4E25A28D6856100646E59 /* EventsInteractor.swift */; };
+		0AB4E26228D6856100646E59 /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4E25B28D6856100646E59 /* EventsViewController.xib */; };
 		6A755259EBF7B957A3B2C6A4 /* Pods_MarvelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327240D7AD06219F9DC1F0B9 /* Pods_MarvelApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +66,13 @@
 		0A614B0428D263DF00D1BE7D /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		0A614B0528D263DF00D1BE7D /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		0AB4E25228D6449100646E59 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		0AB4E25528D6856100646E59 /* EventsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsConfiguration.swift; sourceTree = "<group>"; };
+		0AB4E25628D6856100646E59 /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
+		0AB4E25728D6856100646E59 /* EventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
+		0AB4E25828D6856100646E59 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		0AB4E25928D6856100646E59 /* EventsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProtocols.swift; sourceTree = "<group>"; };
+		0AB4E25A28D6856100646E59 /* EventsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInteractor.swift; sourceTree = "<group>"; };
+		0AB4E25B28D6856100646E59 /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
 		0D3806818267EB4A7194D989 /* Pods-MarvelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp.release.xcconfig"; path = "Target Support Files/Pods-MarvelApp/Pods-MarvelApp.release.xcconfig"; sourceTree = "<group>"; };
 		327240D7AD06219F9DC1F0B9 /* Pods_MarvelApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9DE8A9FEE17BCCDC4C3783 /* Pods-MarvelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApp.debug.xcconfig"; path = "Target Support Files/Pods-MarvelApp/Pods-MarvelApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +127,7 @@
 		0A614ADD28CFE68D00D1BE7D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0AB4E25428D6854400646E59 /* Events */,
 				0A614AED28CFE9BA00D1BE7D /* Characters */,
 				0A614ADE28CFE6B700D1BE7D /* Home */,
 			);
@@ -179,6 +194,20 @@
 				0A614B0528D263DF00D1BE7D /* CharacterTableViewCell.xib */,
 			);
 			path = CharacterCell;
+			sourceTree = "<group>";
+		};
+		0AB4E25428D6854400646E59 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0AB4E25528D6856100646E59 /* EventsConfiguration.swift */,
+				0AB4E25628D6856100646E59 /* EventsPresenter.swift */,
+				0AB4E25728D6856100646E59 /* EventsRouter.swift */,
+				0AB4E25828D6856100646E59 /* EventsViewController.swift */,
+				0AB4E25928D6856100646E59 /* EventsProtocols.swift */,
+				0AB4E25A28D6856100646E59 /* EventsInteractor.swift */,
+				0AB4E25B28D6856100646E59 /* EventsViewController.xib */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		960B93BA4DEAAFE73083859E /* Pods */ = {
@@ -258,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A614AFB28CFE9DA00D1BE7D /* CharactersViewController.xib in Resources */,
+				0AB4E26228D6856100646E59 /* EventsViewController.xib in Resources */,
 				0A614AD628CFE56B00D1BE7D /* LaunchScreen.storyboard in Resources */,
 				0A614B0728D263DF00D1BE7D /* CharacterTableViewCell.xib in Resources */,
 				0A614AD328CFE56B00D1BE7D /* Assets.xcassets in Resources */,
@@ -298,23 +328,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A614ACE28CFE56900D1BE7D /* ViewController.swift in Sources */,
+				0AB4E25D28D6856100646E59 /* EventsPresenter.swift in Sources */,
 				0A614AFE28CFF7E600D1BE7D /* UIColor+.swift in Sources */,
 				0A614AE828CFE6CE00D1BE7D /* HomeRouter.swift in Sources */,
 				0AB4E25328D6449100646E59 /* UITableView+.swift in Sources */,
 				0A614ACA28CFE56900D1BE7D /* AppDelegate.swift in Sources */,
 				0A614AF928CFE9DA00D1BE7D /* CharactersProtocols.swift in Sources */,
+				0AB4E25C28D6856100646E59 /* EventsConfiguration.swift in Sources */,
 				0A614AFA28CFE9DA00D1BE7D /* CharactersInteractor.swift in Sources */,
 				0A614ACC28CFE56900D1BE7D /* SceneDelegate.swift in Sources */,
 				0A614AF528CFE9DA00D1BE7D /* CharactersConfiguration.swift in Sources */,
+				0AB4E25F28D6856100646E59 /* EventsViewController.swift in Sources */,
 				0A614AEA28CFE6CE00D1BE7D /* HomeProtocols.swift in Sources */,
 				0A614AE728CFE6CE00D1BE7D /* HomePresenter.swift in Sources */,
 				0A614AF628CFE9DA00D1BE7D /* CharactersPresenter.swift in Sources */,
 				0A614AEB28CFE6CE00D1BE7D /* HomeInteractor.swift in Sources */,
+				0AB4E25E28D6856100646E59 /* EventsRouter.swift in Sources */,
+				0AB4E26128D6856100646E59 /* EventsInteractor.swift in Sources */,
 				0A614B0628D263DF00D1BE7D /* CharacterTableViewCell.swift in Sources */,
 				0A614AE928CFE6CE00D1BE7D /* HomeViewController.swift in Sources */,
 				0A614AF728CFE9DA00D1BE7D /* CharactersRouter.swift in Sources */,
 				0A614AE628CFE6CE00D1BE7D /* HomeConfiguration.swift in Sources */,
 				0A614AF828CFE9DA00D1BE7D /* CharactersViewController.swift in Sources */,
+				0AB4E26028D6856100646E59 /* EventsProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
