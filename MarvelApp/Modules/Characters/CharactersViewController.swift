@@ -8,7 +8,8 @@
 import UIKit
 
 final class CharactersViewController: UIViewController {
-	private let presenter: CharactersPresenterProtocol
+    @IBOutlet weak var tableView: UITableView!
+    private let presenter: CharactersPresenterProtocol
     
     required init(presenter: CharactersPresenterProtocol) {
         self.presenter = presenter
@@ -22,6 +23,14 @@ final class CharactersViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
         customizeUI()
+        title = "Marvel Challenge"
+        configureTable()
+    }
+    
+    private func configureTable() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(CharacterTableViewCell.self)
     }
     
     // MARK: - View - Private Methods
@@ -30,3 +39,25 @@ final class CharactersViewController: UIViewController {
 
 // MARK: - CharactersViewProtocol
 extension CharactersViewController: CharactersViewProtocol {}
+
+
+extension CharactersViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 15
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: CharacterTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+//        guard let faq = viewPresenter?.getFrequentQuestion(at: indexPath) else { return cell }
+        var url = URL(string: "https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg")!
+        cell.configure(name: "3-D Man",
+                       description: "AIM is a terrorist organization bent on destroying the world. AIM is a terrorist organization bent on destroying the world. AIM is a terrorist organization bent on destroying the world.", urlImage: url)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 129
+    }
+}
+
+extension CharactersViewController: UITableViewDelegate {}
